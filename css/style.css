@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #060606;
+  --txt-color: #F5F5F5;
+}
+
+body { 
+  margin: 0; 
+  background-color: var(--txt-color);
+  color: var(--bg-color);
+}
+
+/* 
+---------------------------------
+        NAVIGATION STYLE
+---------------------------------
+*/
+
+nav {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  box-shadow: 0 0 1.5px 1px var(--bg-color);
+  top: 0;
+  position: sticky;
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  font-size: 110%;
+}
+
+@media (min-width: 600px) {
+  nav {
+    font-size: 130%;
+  }
+}
+
+#nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 0.3em 0.5em;
+}
+
+nav h2 {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-grow: 1;
+  
+}
+
+nav ul {
+  display: inline-block;
+  margin: auto 0;
+  padding: 0;
+  text-wrap-mode: nowrap;
+  text-wrap: nowrap;
+}
+
+nav li {
+  display: inline;
+  padding-left: 0.3rem;
+}
+
+nav a {
+  color: var(--txt-color);
+  font-style: normal;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+nav ::selection {
+  background-color: transparent;
+}
+
+nav #current-page-nav {
+  text-decoration: underline;
+  /* font-weight: 600; */
+}
+
+/* 
+---------------------------------
+          FOOTER STYLE
+---------------------------------
+*/
+
+footer {
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  box-shadow: 0 0 1.5px 1px var(--bg-color);
+  margin-top: 1rem;
+}
+
+#foot-bar {
+  padding: 0.6rem;
+}
+
+/* 
+---------------------------------
+          CONTENT STYLE
+---------------------------------
+responsive design is handled 
+with mobile first approach
+*/
+
+
+main {
+  margin: 0 0.5rem;
+  min-width: 300px;
+}
+
+main a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-style: oblique;
+  text-shadow: 0px 0px 1px gray;
+}
+
+main h1, main h2 {
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+  border-color: var(--bg-color);
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-top: 0.3rem;
+}
+
+main h1 {
+  border-bottom: 3px solid var(--bg-color);
+  border-left-width: 3px;
+  border-left-style: solid;
+  /* SOURCE https://stackoverflow.com/questions/8804417/border-where-only-half-of-a-border-is-visible */
+  border-image: linear-gradient(to top, var(--bg-color) 35%, transparent 36%) 1 100%;
+  border-image-slice: 1; /* to keep bottom border */
+}
+
+main h2 {
+  border-bottom: 2px solid var(--bg-color);
+  border-right-width: 2px;
+  border-right-style: solid;
+  /* SOURCE https://stackoverflow.com/questions/8804417/border-where-only-half-of-a-border-is-visible */
+  border-image: linear-gradient(to top, var(--bg-color) 35%, transparent 36%) 1 100%;
+  border-image-slice: 1; /* to keep bottom border */
+}
+
+main p {
+  margin-left: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main button {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  box-shadow: 1.3px 1.3px gray;
+  padding: 0.2rem 0.4rem;
+}
+
+main ::selection {
+  background-color: rgba(161, 153, 153, 0.626);
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 240%;
+  }
+  h2, h3 { 
+    font-size: 160%;
+  }
+
+  p {
+    font-size: 130%;
+  }
+
+  main {
+    justify-self: center;
+    width: 70%;
+  }
+}
