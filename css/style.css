@@ -1,5 +1,6 @@
+/* from my experience this makes web design easier */
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */ /* actualy not needed */
 }
 
 :root {
@@ -99,12 +100,14 @@ footer {
 }
 
 #foot-bar {
-  padding: 0.6rem;
+  padding: 0.6rem 0;
+  width: 100%;
+  text-align: center;
 }
 
 /* 
 ---------------------------------
-          CONTENT STYLE
+      MAIN CONTENT STYLE
 ---------------------------------
 responsive design is handled 
 with mobile first approach
@@ -114,6 +117,7 @@ with mobile first approach
 main {
   margin: 0 0.5rem;
   min-width: 300px;
+  min-height: 100%;
 }
 
 main a {
@@ -130,6 +134,7 @@ main h1, main h2 {
   border-top-left-radius: 2px;
   border-bottom-right-radius: 2px;
   margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 main h1 {
@@ -148,6 +153,15 @@ main h2 {
   /* SOURCE https://stackoverflow.com/questions/8804417/border-where-only-half-of-a-border-is-visible */
   border-image: linear-gradient(to top, var(--bg-color) 35%, transparent 36%) 1 100%;
   border-image-slice: 1; /* to keep bottom border */
+}
+
+main h3 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 160%;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
 }
 
 main p {
@@ -185,3 +199,193 @@ main ::selection {
     width: 70%;
   }
 }
+
+form {
+  padding: 0.3rem;
+  margin: 0.3rem;
+  border: var(--bg-color) solid 2px;
+  width: fit-content;
+}
+
+form .form-div {
+  padding: 0.3rem;
+}
+
+form input {
+  display: block;
+  background-color: var(--txt-color);
+}
+
+form button {
+  display: block;
+  margin: 0.3rem;
+  margin-left: auto;
+} 
+
+
+/* 
+---------------------------------
+        HELPER UTILS
+---------------------------------
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* SOURCE https://www.w3schools.com/cssref/pr_grid-auto-columns.php */
+  grid-auto-columns: minmax(20px, auto);
+  grid-auto-rows: minmax(20px, auto);
+}
+
+/* 
+  GRID RESPONSIVITY 
+  Here I chose to follow philosophy of desktop first.  
+*/
+
+.col-1 { grid-column: auto / span 1; }
+.col-2 { grid-column: auto / span 2; }
+.col-3 { grid-column: auto / span 3; }
+.col-4 { grid-column: auto / span 4; }
+.col-5 { grid-column: auto / span 5; }
+.col-6 { grid-column: auto / span 6; }
+.col-7 { grid-column: auto / span 7; }
+.col-8 { grid-column: auto / span 8; }
+.col-9 { grid-column: auto / span 9; }
+.col-10 { grid-column: auto / span 10; }
+.col-11 { grid-column: auto / span 11; }
+.col-12 { grid-column: auto / span 12; }
+
+.row-1 { grid-row: auto / span 1; }
+.row-2 { grid-row: auto / span 2; }
+.row-3 { grid-row: auto / span 3; }
+.row-4 { grid-row: auto / span 4; }
+.row-5 { grid-row: auto / span 5; }
+.row-6 { grid-row: auto / span 6; }
+.row-8 { grid-row: auto / span 8; }
+.row-11 { grid-row: auto / span 11; }
+.row-12 { grid-row: auto / span 12; }
+
+/* mobile */
+@media (max-width: 600px) {
+  .col-sm-1 { grid-column: auto / span 1; }
+  .col-sm-2 { grid-column: auto / span 2; }
+  .col-sm-3 { grid-column: auto / span 3; }
+  .col-sm-4 { grid-column: auto / span 4; }
+  .col-sm-5 { grid-column: auto / span 5; }
+  .col-sm-6 { grid-column: auto / span 6; }
+  .col-sm-7 { grid-column: auto / span 7; }
+  .col-sm-8 { grid-column: auto / span 8; }
+  .col-sm-9 { grid-column: auto / span 9; }
+  .col-sm-10 { grid-column: auto / span 10; }
+  .col-sm-11 { grid-column: auto / span 11; }
+  .col-sm-12 { grid-column: auto / span 12; }
+
+  .row-sm-1 { grid-row: auto / span 1; }
+  .row-sm-2 { grid-row: auto / span 2; }
+  .row-sm-3 { grid-row: auto / span 3; }
+  .row-sm-4 { grid-row: auto / span 4; }
+  .row-sm-5 { grid-row: auto / span 5; }
+  .row-sm-6 { grid-row: auto / span 6; }
+  .row-sm-8 { grid-row: auto / span 8; }
+  .row-sm-11 { grid-row: auto / span 11; }
+  .row-sm-12 { grid-row: auto / span 12; }
+}
+
+
+/* text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* text colors */
+
+.red-100 { color: rgb(255, 200, 200); }
+.red-200 { color: rgb(255, 175, 175); }
+.red-300 { color: rgb(255, 150, 150); }
+.red-400 { color: rgb(255, 125, 125); }
+.red-500 { color: rgb(255, 100, 100); }
+.red-600 { color: rgb(255, 75, 75); }
+.red-700 { color: rgb(255, 50, 50); }
+.red-800 { color: rgb(255, 25, 25); }
+.red-900 { color: rgb(255, 0, 0); }
+
+.green-100 { color: rgb(200, 255, 200); }
+.green-200 { color: rgb(175, 255, 175); }
+.green-300 { color: rgb(150, 255, 150); }
+.green-400 { color: rgb(125, 255, 125); }
+.green-500 { color: rgb(100, 255, 100); }
+.green-600 { color: rgb(75, 255, 75); }
+.green-700 { color: rgb(50, 255, 50); }
+.green-800 { color: rgb(25, 255, 25); }
+.green-900 { color: rgb(0, 255, 0); }
+
+
+.blue-100 { color: rgb(200, 200, 255); }
+.blue-200 { color: rgb(175, 175, 255); }
+.blue-300 { color: rgb(150, 150, 255); }
+.blue-400 { color: rgb(125, 125, 255); }
+.blue-500 { color: rgb(100, 100, 255); }
+.blue-600 { color: rgb(75, 75, 255); }
+.blue-700 { color: rgb(50, 50, 255); }
+.blue-800 { color: rgb(25, 25, 255); }
+.blue-900 { color: rgb(0, 0, 255); }
+
+.sky-100 { color: rgb(200, 255, 255); }
+.sky-200 { color: rgb(175, 255, 255); }
+.sky-300 { color: rgb(150, 255, 255); }
+.sky-400 { color: rgb(125, 255, 255); }
+.sky-500 { color: rgb(100, 255, 255); }
+.sky-600 { color: rgb(75, 255, 255); }
+.sky-700 { color: rgb(50, 255, 255); }
+.sky-800 { color: rgb(25, 255, 255); }
+.sky-900 { color: rgb(0, 255, 255); }
+
+.pink-100 { color: rgb(255, 200, 255); }
+.pink-200 { color: rgb(255, 175, 255); }
+.pink-300 { color: rgb(255, 150, 255); }
+.pink-400 { color: rgb(255, 125, 255); }
+.pink-500 { color: rgb(255, 100, 255); }
+.pink-600 { color: rgb(255, 75, 255); }
+.pink-700 { color: rgb(255, 50, 255); }
+.pink-800 { color: rgb(255, 25, 255); }
+.pink-900 { color: rgb(255, 0, 255); }
+
+.yellow-100 { color: rgb(255, 255, 200); }
+.yellow-200 { color: rgb(255, 255, 175); }
+.yellow-300 { color: rgb(255, 255, 150); }
+.yellow-400 { color: rgb(255, 255, 125); }
+.yellow-500 { color: rgb(255, 255, 100); }
+.yellow-600 { color: rgb(255, 255, 75); }
+.yellow-700 { color: rgb(255, 255, 50); }
+.yellow-800 { color: rgb(255, 255, 25); }
+.yellow-900 { color: rgb(255, 255, 0); }
+
+.black-100, .gray-900 { color: rgb(200, 200, 200); }
+.black-200, .gray-800 { color: rgb(175, 175, 175); }
+.black-300, .gray-700 { color: rgb(150, 150, 150); }
+.black-400, .gray-600 { color: rgb(125, 125, 125); }
+.black-500, .gray-500 { color: rgb(100, 100, 100); }
+.black-600, .gray-400 { color: rgb(75, 75, 75); }
+.black-700, .gray-300 { color: rgb(50, 50, 50); }
+.black-800, .gray-200 { color: rgb(25, 25, 25); }
+.black-900, .gray-100 { color: rgb(0, 0, 0); }
+
+.white-100 { color: rgb(135, 135, 135); }
+.white-200 { color: rgb(150, 150, 150); }
+.white-300 { color: rgb(165, 165, 165); }
+.white-400 { color: rgb(180, 180, 180); }
+.white-500 { color: rgb(195, 195, 195); }
+.white-600 { color: rgb(210, 210, 210); }
+.white-700 { color: rgb(225, 225, 225); }
+.white-800 { color: rgb(240, 240, 240); }
+.white-900 { color: rgb(255, 255, 255); }
+
+
+.image-max-fit {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.inline { display: inline; }
