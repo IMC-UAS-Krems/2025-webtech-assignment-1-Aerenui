@@ -214,6 +214,15 @@ form .form-div {
 form input {
   display: block;
   background-color: var(--txt-color);
+  height: 2rem;
+  border: var(--bg-color) solid 0.03rem;
+}
+
+
+form textarea {
+  display: block;
+  background-color: var(--txt-color);
+  border: var(--bg-color) solid 0.03rem;
 }
 
 form button {
@@ -237,11 +246,19 @@ form button {
   grid-auto-rows: minmax(20px, auto);
 }
 
+.fit-grid {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* 
   GRID RESPONSIVITY 
   Here I chose to follow philosophy of desktop first.  
 */
 
+.col-0 { width: 0; height: 0; }
 .col-1 { grid-column: auto / span 1; }
 .col-2 { grid-column: auto / span 2; }
 .col-3 { grid-column: auto / span 3; }
@@ -267,6 +284,7 @@ form button {
 
 /* mobile */
 @media (max-width: 600px) {
+  .col-sm-0 { width: 0; height: 0; display: none; }
   .col-sm-1 { grid-column: auto / span 1; }
   .col-sm-2 { grid-column: auto / span 2; }
   .col-sm-3 { grid-column: auto / span 3; }
@@ -379,6 +397,38 @@ form button {
 .white-700 { color: rgb(225, 225, 225); }
 .white-800 { color: rgb(240, 240, 240); }
 .white-900 { color: rgb(255, 255, 255); }
+
+
+.p-1 { padding: 0.2rem; }
+.p-2 { padding: 0.3rem; }
+.p-3 { padding: 0.45rem; }
+.p-4 { padding: 0.6rem; }
+.p-5 { padding: 0.75rem; }
+
+.pt-1 { padding-top: 0.2rem; }
+.pt-2 { padding-top: 0.3rem; }
+.pt-3 { padding-top: 0.45rem; }
+.pt-4 { padding-top: 0.6rem; }
+.pt-5 { padding-top: 0.75rem; }
+
+
+.pb-1 { padding-bottom: 0.2rem; }
+.pb-2 { padding-bottom: 0.3rem; }
+.pb-3 { padding-bottom: 0.45rem; }
+.pb-4 { padding-bottom: 0.6rem; }
+.pb-5 { padding-bottom: 0.75rem; }
+
+.pl-1 { padding-left: 0.2rem; }
+.pl-2 { padding-left: 0.3rem; }
+.pl-3 { padding-left: 0.45rem; }
+.pl-4 { padding-left: 0.6rem; }
+.pl-5 { padding-left: 0.75rem; }
+
+.pr-1 { padding-right: 0.2rem; }
+.pr-2 { padding-right: 0.3rem; }
+.pr-3 { padding-right: 0.45rem; }
+.pr-4 { padding-right: 0.6rem; }
+.pr-5 { padding-right: 0.75rem; }
 
 
 .image-max-fit {

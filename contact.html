@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- SOURCE https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/CSS -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SOURCE https://www.geeksforgeeks.org/html/how-to-change-browser-theme-color-using-html/ -->
+  <meta name="theme-color" content="#060606" />
+  <meta name="author" content="František Slivko" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  <title>František Slivko</title>
+</head>
+<body>
+  <nav>
+    <div id="nav-bar">
+      <h2> <a href="/index.html"> František Slivko </a> </h2>
+      <ul>
+        <li><a  href="/about.html">About</a></li>
+        <li><a href="/cv.html">CV</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a id="current-page-nav" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div>
+      <section>
+        <h1> Contact form </h1>
+      </section>
+      <br>
+      <section>
+        <form action="#" class="grid p-3" style="width: fit-content; margin-left: auto; margin-right: auto;">
+          <label class="col-1 col-sm-12 row-2 row-sm-1" for="name-in">Name</label>
+          <input class="col-11 col-sm-12 row-2" id="name-in" type="text">
+          
+          <div class="col-12 col-sm-0"></div>
+
+          <label class="col-1 col-sm-12 row-2 row-sm-1" for="email-in">Email</label>
+          <input class="col-11 col-sm-12 row-2" id="email-in" type="email">
+
+          <div class="col-12 col-sm-0"></div>
+
+          <label class="col-1 col-sm-12 pt-4 pr-2 row-5 row-sm-1" for="message-in">Message</label>
+          <textarea class="col-11 col-sm-12 row-5 fit-grid" id="message-in" type="text" style="min-height: 200px;"></textarea>
+
+          <div class="col-1 col-sm-0"></div>
+          <div class="">
+            <button type="submit">Send</button>
+          </div>
+          
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div id="foot-bar">
+      © František Slivko 2025
+    </div>
+  </footer>
+</body>
+</html>
