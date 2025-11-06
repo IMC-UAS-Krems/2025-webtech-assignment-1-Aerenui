@@ -229,7 +229,7 @@ form button {
   display: block;
   margin: 0.3rem;
   margin-left: auto;
-} 
+}
 
 
 /* 
@@ -244,6 +244,7 @@ form button {
   /* SOURCE https://www.w3schools.com/cssref/pr_grid-auto-columns.php */
   grid-auto-columns: minmax(20px, auto);
   grid-auto-rows: minmax(20px, auto);
+  width: fit-content;
 }
 
 .fit-grid {
@@ -312,7 +313,7 @@ form button {
 
 /* text alignment */
 .text-left { text-align: left; }
-.text-center { text-align: center; }
+.text-vcenter { text-align: center; }
 .text-right { text-align: right; }
 
 /* text colors */
@@ -398,6 +399,7 @@ form button {
 .white-800 { color: rgb(240, 240, 240); }
 .white-900 { color: rgb(255, 255, 255); }
 
+/* PADDING */
 
 .p-1 { padding: 0.2rem; }
 .p-2 { padding: 0.3rem; }
@@ -430,6 +432,43 @@ form button {
 .pr-4 { padding-right: 0.6rem; }
 .pr-5 { padding-right: 0.75rem; }
 
+/* MARGIN */
+
+.m-a { margin: auto; }
+.m-1 { margin: 0.2rem; }
+.m-2 { margin: 0.3rem; }
+.m-3 { margin: 0.45rem; }
+.m-4 { margin: 0.6rem; }
+.m-5 { margin: 0.75rem; }
+
+.mt-a { margin-top: auto; }
+.mt-1 { margin-top: 0.2rem; }
+.mt-2 { margin-top: 0.3rem; }
+.mt-3 { margin-top: 0.45rem; }
+.mt-4 { margin-top: 0.6rem; }
+.mt-5 { margin-top: 0.75rem; }
+
+.mb-a { margin-bottom: auto; }
+.mb-1 { margin-bottom: 0.2rem; }
+.mb-2 { margin-bottom: 0.3rem; }
+.mb-3 { margin-bottom: 0.45rem; }
+.mb-4 { margin-bottom: 0.6rem; }
+.mb-5 { margin-bottom: 0.75rem; }
+
+.ml-a { margin-left: auto; }
+.ml-1 { margin-left: 0.2rem; }
+.ml-2 { margin-left: 0.3rem; }
+.ml-3 { margin-left: 0.45rem; }
+.ml-4 { margin-left: 0.6rem; }
+.ml-5 { margin-left: 0.75rem; }
+
+.mr-a { margin-right: auto; }
+.mr-1 { margin-right: 0.2rem; }
+.mr-2 { margin-right: 0.3rem; }
+.mr-3 { margin-right: 0.45rem; }
+.mr-4 { margin-right: 0.6rem; }
+.mr-5 { margin-right: 0.75rem; }
+
 
 .image-max-fit {
   width: auto;
@@ -438,4 +477,28 @@ form button {
   max-height: 100%;
 }
 
-.inline { display: inline; }
+.inline { display: inline-flex; }
+.flex { display: flex; }
+
+.text-wrap { text-wrap-mode: wrap; }
+
+.full-w {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .full-w-sm {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.hide { display: none; }
+.show { display: inherit; }
+
+@media (max-width: 600px) {
+  .sm-hide { display: none; }
+  .sm-show { display: inherit; }
+}
